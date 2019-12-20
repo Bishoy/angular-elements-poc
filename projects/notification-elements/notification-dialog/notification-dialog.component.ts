@@ -17,6 +17,8 @@ import {
 export class NotificationDialogComponent implements OnInit {
 
   count: Observable<number> = timer(0,1000);
+  myText: string;
+
   constructor() { }
 
   ngOnInit() { }
