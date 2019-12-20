@@ -1,4 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  timer, Observable
+} from 'rxjs';
+import {
+  map, switchMap
+} from 'rxjs/operators';
 
 @Component({
   selector: 'app-notification-dialog',
@@ -7,9 +16,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationDialogComponent implements OnInit {
 
+  count: Observable<number> = timer(0,1000);
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }
